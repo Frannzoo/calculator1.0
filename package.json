@@ -4,14 +4,14 @@
   "description": "A voting calculator application using Node.js, Puppeteer, and Express",
   "main": "server.js",
   "dependencies": {
-    "chrome-aws-lambda": "^9.1.0",
     "express": "^4.17.2",
-    "playwright": "^1.45.1"
+    "playwright": "^1.45.1",
+    "vercel-aws-lambda": "^3.1.0"
   },
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
     "build": "node server.js",
-    "postinstall": "npx playwright install chromium"
+    "postinstall": "npx playwright install"
   }
 }
