@@ -31,7 +31,7 @@ async function scrapeData() {
 
     try {
         await page.goto('https://eth-metapool.narwallets.com/votes/table/user?id=brianmai.near&dateIso=2024-07-01');
-        await page.waitForSelector('body', { timeout: 30000 });
+        await page.waitForSelector('body', { timeout: 80000 });
 
         const totalVP = await page.evaluate(() => {
             const pageContent = document.body.innerText;
@@ -41,7 +41,7 @@ async function scrapeData() {
         });
 
         await page.goto('https://stats.metapool.app/d/o6-y_wQ7k/meta-pool-public-dashboard?orgId=2');
-        await page.waitForSelector('#reactRoot > div > main > div.css-1mwktlb > div > div > div.scrollbar-view > div > div:nth-child(2) > div > div:nth-child(15) > section > div.panel-content.panel-content--no-padding > div > div > div > div:nth-child(1) > div > div > span:nth-child(2)', { timeout: 60000 });
+        await page.waitForSelector('#reactRoot > div > main > div.css-1mwktlb > div > div > div.scrollbar-view > div > div:nth-child(2) > div > div:nth-child(15) > section > div.panel-content.panel-content--no-padding > div > div > div > div:nth-child(1) > div > div > span:nth-child(2)', { timeout: 80000 });
 
         const grafanaValue = await page.evaluate(() => {
             const element = document.querySelector('#reactRoot > div > main > div.css-1mwktlb > div > div > div.scrollbar-view > div > div:nth-child(2) > div > div:nth-child(15) > section > div.panel-content.panel-content--no-padding > div > div > div > div:nth-child(1) > div > div > span:nth-child(2)');
