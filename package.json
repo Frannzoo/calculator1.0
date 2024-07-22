@@ -10,8 +10,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "npx playwright install",
-    "dev" : "node server.js",
-    "build": "node server.js"
+    "dev": "node server.js",
+    "build": "node server.js",
+    "postinstall": "npx playwright install chromium"
   }
 }
